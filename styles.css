@@ -3,5 +3,112 @@
     padding: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+html {
+    color: hsl(212, 21%, 14%);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+body {
+    background: hsl(30, 38%, 92%); 
+    height: 100%;
+    
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: grid; 
+}
+
+.card {
+    display: grid;
+    justify-self: center;
+    background: white;
+    max-width: 375px;
+    margin: 30px 15px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.item-details {
+    padding: 20px;
+}
+
+.button-wrapper {
+    padding: 0px 30px 20px;
+}
+
+.card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.card button img {
+    width: 1.3rem;
+    margin-right: 10px;
+}
+
+.item-category {
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0.25rem;
+    margin: 5px 0;
+}
+
+.item-name {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.item-desc {
+    font-size: 1.1rem;
+}
+
+.item-price {
+    display: flex;
+    margin: 20px 0 0;
+    align-items: center;
+}
+
+.item-price h1 {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    margin-right: 20px;
+}
+
+.item-price p {
+    text-decoration: line-through;
+    opacity: 0.8;
+}

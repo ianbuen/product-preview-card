@@ -12,11 +12,14 @@ html {
 
 body {
     background: hsl(30, 38%, 92%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
-    
 }
 
 .attribution {
+    color: hsl(228, 12%, 48%);
     font-size: 11px;
     text-align: center;
 }
@@ -26,29 +29,30 @@ body {
 }
 
 main {
-    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    padding: 75px 0 0;
 }
 
 footer {
-    display: grid; 
+    padding: 0 0 20px;
 }
 
-.card {
-    display: grid;
-    justify-self: center;
+.card { 
     background: white;
     max-width: 375px;
     margin: 30px 15px;
     border-radius: 10px;
 }
 
-.card img {
+.img-mobile {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.img-desktop {
+    display: none;
 }
 
 .item-details {
@@ -56,7 +60,7 @@ footer {
 }
 
 .button-wrapper {
-    padding: 0px 30px 20px;
+    padding: 20px 0 5px;
 }
 
 .card button {
@@ -71,6 +75,11 @@ footer {
     font-size: 1.2rem;
     padding: 15px 20px;
     width: 100%;
+}
+
+button:hover {
+    background: hsl(158, 36%, 25%);
+    cursor: pointer;
 }
 
 .card button img {
@@ -88,11 +97,12 @@ footer {
     font-family: 'Fraunces', serif;
     font-size: 2.5rem;
     line-height: 1;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .item-desc {
     font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .item-price {
@@ -111,4 +121,93 @@ footer {
 .item-price p {
     text-decoration: line-through;
     opacity: 0.8;
+}
+
+
+
+
+@media only screen and (min-width: 1080px) {
+
+    main {
+        padding: 0;
+    }
+
+    .attribution { 
+        font-size: 1rem; 
+    }
+
+    .card {
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-desktop {
+        display: block;
+        max-width: 100%;
+        grid-column: 1;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .item-details {
+        grid-column: 2;
+        align-self: center;
+        padding: 25px;
+    } 
+
+    .button-wrapper {
+        grid-column: 2;
+        padding: 30px 0 0;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .card {
+        max-width: 800px; 
+    }
+
+    .item-category {
+        font-size: large;
+    }
+
+    .item-details {
+        padding: 30px 40px;
+    }
+
+    .item-name {
+        font-size: 3.15rem;
+        margin: 30px 0;
+    }
+
+    .item-desc {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    .item-price {
+        margin: 30px 0 0;
+    }
+
+    .item-price h1 {
+        font-size: 3rem;
+    }
+
+    .item-price p {
+        font-size: 1.5rem;
+    }
+
+    .button-wrapper {
+        padding: 40px 0 0;
+    }
+
+    .button-wrapper button {
+        padding: 20px 0;
+        font-size: 1.35rem;
+    }
 }
